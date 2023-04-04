@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Home from "./components/home";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
+import history from "./utils/history";
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HistoryRouter history={history}>
+        {/* 路由入口 */}
+        <Routes>
+          {/* <Route path="/" exact={true}  element={<EnterRoom />} /> */}
+          <Route path="/*" exact={true} element={<Home />} />
+          {/* <Route path="/stats" element={<StatsHome />}></Route>
+          <Route path="/log" element={<LogHome></LogHome>}></Route> */}
+        </Routes>
+
+      </HistoryRouter>
     </div>
   );
 }

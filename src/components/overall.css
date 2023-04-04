@@ -1,0 +1,18 @@
+.statsContent{
+    min-height: calc(94vh - 50px);
+    /* background-color: rgb(61, 157, 79); */
+}
+
+.logContent{
+    min-height: calc(94vh - 50px);
+    
+    /* max-height: 1000px; */
+    /* background-color: rgb(61, 157, 79); */
+}
+
+.general-card{
+    border: 2px solid rgb(124, 124, 209);
+    /* border: 2px solid rgb(124, 209, 155); */
+
+    border-radius: 10px;
+}
